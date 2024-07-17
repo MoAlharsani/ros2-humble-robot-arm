@@ -1,6 +1,6 @@
 # ROS2 Humble Robot Arm
 
-This repository provides guidance on launching a URDF model with STL meshes using ROS2 Humble. The URDF model is created by the [robot-arm-pkg](https://github.com/smart-methods/arduino_robot_arm) from [SmartMethods](https://github.com/smart-methods/).
+This repository provides guidance on launching a URDF model with STL meshes using ROS2 Humble. The URDF model is in this package [robot-arm-pkg](https://github.com/smart-methods/arduino_robot_arm),and created by [SmartMethods](https://github.com/smart-methods/).
 
 This tutorial emphasizes understanding the process of setting up a ROS workspace and building the package step by step, rather than a one-click installation.
 
@@ -11,6 +11,19 @@ This tutorial emphasizes understanding the process of setting up a ROS workspace
 ```bash
 mkdir -p ~/robot_arm_ros2_ws/src
 cd ~/robot_arm_ros2_ws/src
+```
+#### 1.1 To install the package quickly, setup the package using these commands
+```bash
+git clone https://github.com/MoAlharsani/ros2-humble-robot-arm.git
+mv ros2-humble-robot-arm/robot_arm_description .
+rm -rf ros2-humble-robot-arm
+```
+#### 1.2 Build, source, and launch the package
+```bash
+cd ~/robot_arm_ros2_ws/
+colcon build
+source ~/robot_arm_ros2_ws/install/setup.bash
+ros2 launch robot_arm_description display.launch.py
 ```
 
 ### 2. Create the Package
@@ -84,4 +97,12 @@ curl -O https://raw.githubusercontent.com/MoAlharsani/ros2-humble-robot-arm/main
 cd ~/robot_arm_ros2_ws/src/robot_arm_description/
 rm -rf CMakeLists.txt
 curl -O https://raw.githubusercontent.com/MoAlharsani/ros2-humble-robot-arm/main/robot_arm_description/CMakeLists.txt
+```
+
+### 6 Build, source, and launch the package
+```bash
+cd ~/robot_arm_ros2_ws/
+colcon build
+source ~/robot_arm_ros2_ws/install/setup.bash
+ros2 launch robot_arm_description display.launch.py
 ```
