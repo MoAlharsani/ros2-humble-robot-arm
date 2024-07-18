@@ -43,6 +43,6 @@ ros2 launch robot_arm_description display.launch.py
 ```
 
 
-By following these steps, you should be able to visualize the robot arm model using ROS2 Humble. If you encounter any issues, please refer to the ROS2 and Colcon documentation for additional troubleshooting steps.
+By following these steps, you should be able to visualize the robot arm model using ROS2 Humble.
 
 
