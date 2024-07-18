@@ -14,8 +14,6 @@ cd ~/robot_arm_ros2_ws/src
 #### 1.1 Download the package, and remove extra files
 ```bash
 git clone https://github.com/MoAlharsani/ros2-humble-robot-arm.git
-mv ros2-humble-robot-arm/robot_arm_description .
-rm -rf ros2-humble-robot-arm
 ```
 ```bash
 mv ros2-humble-robot-arm/robot_arm_description .
@@ -25,8 +23,6 @@ rm -rf ros2-humble-robot-arm
 ```bash
 cd ~/robot_arm_ros2_ws/
 colcon build
-source ~/robot_arm_ros2_ws/install/setup.bash
-ros2 launch robot_arm_description display.launch.py
 ```
 ```bash
 source ~/robot_arm_ros2_ws/install/setup.bash
