@@ -1,0 +1,7 @@
+# Default initial positions for arduino_robot_arm's ros2_control fake system
+
+initial_positions:
+  base_joint: 0.0
+  elbow: 0.0
+  shoulder: 0.0
+  wrist: 0.0
