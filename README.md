@@ -31,7 +31,7 @@ Before starting, ensure you have the following installed on your system:
 mkdir -p ~/robot_arm_ros2_ws/src
 cd ~/robot_arm_ros2_ws/src
 ```
-#### 1.1 Download the package, and remove extra files
+### 2. Download the package, and remove extra files
 ```bash
 git clone https://github.com/MoAlharsani/ros2-humble-robot-arm.git
 ```
@@ -42,7 +42,7 @@ mv ros2-humble-robot-arm/robot_arm_description ros2-humble-robot-arm/moveit_pkg 
 ```bash
 rm -rf ros2-humble-robot-arm
 ```
-#### 1.2 Build, source, and launch the package
+### 3. Build, source, and launch the package
 ```bash
 cd ~/robot_arm_ros2_ws/
 ```
@@ -52,12 +52,12 @@ colcon build
 ```bash
 source ~/robot_arm_ros2_ws/install/setup.bash
 ```
-##### 1.2.1 To run the URDF Model In RViz
+#### 3.1 To run the URDF Model In RViz
 ```bash
 ros2 launch robot_arm_description display.launch.py
 ```
 
-##### 1.2.2 To run the URDF Model In RViz with MoveIt Plugin
+#### 3.2 To run the URDF Model In RViz with MoveIt Plugin
 ```bash
 ros2 launch moveit_pkg demo.launch.py 
 ```
