@@ -29,18 +29,32 @@ cd ~/robot_arm_ros2_ws/src
 git clone https://github.com/MoAlharsani/ros2-humble-robot-arm.git
 ```
 ```bash
-mv ros2-humble-robot-arm/robot_arm_description .
+mv ros2-humble-robot-arm/robot_arm_description ros2-humble-robot-arm/moveit_pkg .
+
+```
+```bash
 rm -rf ros2-humble-robot-arm
 ```
 #### 1.2 Build, source, and launch the package
 ```bash
 cd ~/robot_arm_ros2_ws/
+```
+```bash
 colcon build
 ```
 ```bash
 source ~/robot_arm_ros2_ws/install/setup.bash
+```
+##### 1.2.1 To run the URDF Model In RViz
+```bash
 ros2 launch robot_arm_description display.launch.py
 ```
+
+##### 1.2.2 To run the URDF Model In RViz with MoveIt Plugin
+```bash
+ros2 launch moveit_pkg demo.launch.py 
+```
+
 
 
 By following these steps, you should be able to visualize the robot arm model using ROS2 Humble.
