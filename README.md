@@ -4,7 +4,13 @@ This repository provides guidance on launching a URDF model with STL meshes usin
 
 ## Introduction
 
-This package allows users to visualize and manipulate a robot arm model using ROS2 Humble. It includes the necessary URDF files and STL meshes to represent the robot arm. This guide will walk you through the steps to set up the workspace, download the package, build it, and launch the visualization.
+This package allows users to visualize and manipulate a robot arm model in ROS2 Humble evniroment with RViz and MoveIt2. It includes the necessary URDF files and STL meshes to represent the robot arm. This guide will walk you through the steps to set up the workspace, download the package, build it, and launch the visualization. 
+
+### Overview of Packages:
+1. robot_arm_description:
+    This package contains launch files to visualize the robot arm's URDF model in RViz. You'll be able to observe the robot arm in a 3D environment, inspecting its structure and components.
+2. moveit_pkg:
+In addition to RViz visualization, this package includes launch files for MoveIt!, a powerful motion planning framework. With MoveIt!, you can control the robot arm using Inverse Kinematics (IK). This means you can manipulate the end effector coordinates, and MoveIt! will automatically adjust the joint positions accordingly, enabling intuitive control and motion planning.
 
 ## Prerequisites
 
@@ -13,6 +19,7 @@ Before starting, ensure you have the following installed on your system:
 - [ROS2 Humble](https://docs.ros.org/en/humble/Installation.html)
 - [Colcon](https://colcon.readthedocs.io/en/released/user/installation.html)
 - [Git](https://git-scm.com/book/en/v2/Getting-Started-Installing-Git)
+- [MoveIt2](https://moveit.ros.org/install-moveit2/binary/)
 
 
 
